@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+
         checkYearIsLeap(2020);
         checkYearIsLeap(2010);
         checkYearIsLeap(2030);
@@ -40,6 +41,7 @@ public class Main {
             osType = "Android";
         }
         String generalInfo = "Установите " + lightInfo + "версию приложения для " + osType + " по ссылке ";
+        System.out.println(generalInfo);
 
     }
     public  static int computeDeliveryDays (int distance) {
