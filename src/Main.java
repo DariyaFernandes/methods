@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -8,9 +10,11 @@ public class Main {
         checkYearIsLeap(2030);
         getOsRecommendation(2015, 0);
         getOsRecommendation(2014, 1);
+
         computeDeliveryDays(20);
         computeDeliveryDays(40);
         computeDeliveryDays(60);
+
 
     }
 
@@ -24,12 +28,13 @@ public class Main {
 
     }
 
-    public static void getOsRecommendation(int currentYear, int clientOs) {
+    public static void getOsRecommendation(int deviceYear, int clientOs) {
         int borderYear = 2015;
-
+        int currentYear = LocalDate.now().getYear();
+        
         String lightInfo;
 
-        if (currentYear < borderYear) {
+        if (deviceYear < currentYear) {
             lightInfo = "облегченную ";
         } else {
             lightInfo = "";
